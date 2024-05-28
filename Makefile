@@ -26,6 +26,11 @@ ifeq ($(TARGET), generator)
 	prog = $(OUT_DIR)/generator
 endif
 
+ifeq ($(TARGET), viewer)
+	objects = $(OUT_DIR)/viewer.o
+	prog = $(OUT_DIR)/viewer
+endif
+
 .PHONY: all
 
 all: $(OUT_DIR) $(prog)
